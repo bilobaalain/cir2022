@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .input {
+            border: 1px solid pink;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="get" id="mainform">
+        <div>
+            <label for="prenom">Prenom *</label>
+            <input type="text" name="prenom" id="prenom" placeholder="Votre prénom svp" class="input" required="required">
+        </div>
+
+        <div>
+            <label for="keyword">Mot de passe *</label>
+            <input type="password" name="keyword" id="keyword" placeholder="Votre mot de passe svp" class="input" required="required">
+        </div>
+        
+        <div>
+            <label for="mail">Votre email</label>
+            <input type="email" name="mail" id="mail" class="input"  placeholder="Votre email svp">
+        </div>
+
+        <div>
+            <label for="horsligne">Etes vous hors-ligne ?</label>
+            <input type="checkbox" value="sans doute" name="horsligne" id="horsligne" class="input">
+            <label for="horsligne1">Etes vous hors-ligne ?</label>
+            <input type="checkbox" value="oui peut" name="horsligne" id="horsligne1" class="input">
+        </div>
+
+        <div>
+        <input type="range" name="evaluation" id="evaluation" min="0" max="10" step="2">
+        </div>
+
+        <fieldset>
+            <legend>Avez vous un véhicule motorisé</legend>
+            <label for="v-yes">Oui</label>
+            <input type="radio" name="v-motorise" id="v-yes">
+            <label for="v-no">No</label>
+            <input type="radio" name="v-motorise" id="v-no">
+        </fieldset>
+
+
+        <select name="pays" id="">
+            <option value="-">Genre</option>
+            <optgroup label="Europe">
+                <option value="Mme">France</option>
+                <option value="M">Allemagne</option>
+            </optgroup>
+            <optgroup label="Asie">
+                <option value="Mme">Corée du sud</option>
+                <option value="M">Chine</option>
+            </optgroup>
+
+          
+          
+
+
+        </select>
+       
+<label for="c-picker">Color picker</label><input type="color" name="c-cpicker" id="c-picker">
+<input type="date" name="" id="">
+<input type="file" name="" id="">
+
+
+
+        <textarea name="message" id="" cols="30" rows="10"></textarea>
+
+
+        <!-- <input type="submit" value="Envoyer"> -->
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Vider le formulaire">
+
+
+    </form>
+
+    <script>
+
+
+        document.getElementById("mainform").addEventListener("submit", function(){
+    
+            let cpicker = document.getElementById("c-picker").value;
+            alert("voici la couleur choisie: " + cpicker);
+
+        });
+
+
+    </script>
+</body>
+</html>
